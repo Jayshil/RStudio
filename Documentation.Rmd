@@ -75,4 +75,11 @@ yy
 zz
 ```
 
+To create a **list**, use a ```list()``` function as follows:
+
+```{r}
+ab = list(1, "ab", TRUE, 1+4i)
+ab
+```
+
 
