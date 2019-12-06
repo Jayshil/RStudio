@@ -4,34 +4,75 @@ author: "Jayshil"
 date: "3 December 2019"
 output: html_document
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
-
 ```{r}
 print('Hello World!')
 ```
 
 Alright, this was my first hands-on with R markdown. Hope it went well!!
+
+***
+
+# My R Documentation
+
+'<-' is an assignment operator. For example,
+
+```{r}
+x <- 1
+print(x)
+x
+msg <- 'Hello World'
+print(msg)
+# This is for comments
+```
+
+To create sequence use ':'. E.g.,
+
+```{r}
+x <- 1:20
+x
+```
+
+Five objects of R:
+
+* Character
+* Numeric
+* Integer
+* Complex
+* Boolean
+
+A most basic object is a vector; contains objects of the same class
+
+'List' can contain objects of different classes. This is an exception to the the vector class.
+
+Empty vector can be created with the ```vector()``` function. It can have two arguments: First argument is the *class* of the object and the second would be the *length* of the object.
+
+## Creating Vectors
+
+The ```c()``` function can be used to create vectors of objects. 'c' stands for concatenate, because it can be used to concatenate things together.
+
+```{r}
+x <- c(0.5,0.6,0.7)   ## Numeric
+y <- c("a", "b", "c") ## Character
+z <- 1:7              ## Integer
+w <- c(1+0i,2+3i)     ## Complex
+xyzw = c(x,y,z,w)     ## Concatenate everything by making them string
+vec = vector("numeric", length = 5)
+x
+y
+z
+w
+xyzw
+vec
+```
+
+To covert one class from another use ```as.***``` function. For example, let's convert numeric ```x``` from above example to character. However the insensical conversion don't work. That means the conversion of ```y``` from above example to numerica would results in ```NA``` to each components.
+
+```{r}
+x
+yy = as.character(x)
+zz = as.numeric(y)
+yy
+zz
+```
+
 
